@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://crqtyqupdtt0l"]
+
+[ext_resource type="Script" path="res://scripts/clue.gd" id="1_bloll"]
+[ext_resource type="Texture2D" uid="uid://dtcdil5mg2k0r" path="res://assets/Puzzles/Clue_Giver.png" id="2_ha123"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sn57k"]
+size = Vector2(16, 16)
+
+[node name="Clue" type="Area2D"]
+script = ExtResource("1_bloll")
+solution = 1
+
+[node name="Chest1" type="Sprite2D" parent="."]
+texture = ExtResource("2_ha123")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sn57k")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
