@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gketfaigsao8"
+path="res://.godot/imported/RUI Menu BGM.wav-c9014833f673a7e06b66412248d379ad.sample"
+
+[deps]
+
+source_file="res://assets/Music + Sound/RUI Menu BGM.wav"
+dest_files=["res://.godot/imported/RUI Menu BGM.wav-c9014833f673a7e06b66412248d379ad.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,206 @@
+[gd_scene load_steps=13 format=3 uid="uid://0dfwjia4cw0v"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_8mq5d"]
+[ext_resource type="FontFile" uid="uid://duuutyuav8dyx" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="2_lr0va"]
+[ext_resource type="Texture2D" uid="uid://djdtdnhybaywr" path="res://assets/MenuBG.png" id="3_gcisr"]
+[ext_resource type="AudioStream" uid="uid://cmnny1to33kto" path="res://assets/Music + Sound/RUI Menu BGM.mp3" id="4_547ed"]
+[ext_resource type="AudioStream" uid="uid://cd85hrwtvqbuo" path="res://assets/audio effects retro/Extras/select sound.wav" id="5_1h2un"]
+[ext_resource type="AudioStream" uid="uid://danf4c3ew4axj" path="res://assets/audio effects retro/hud/menu select.wav" id="6_87mol"]
+[ext_resource type="FontFile" uid="uid://da3lvaofb37qs" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="7_vriyh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xwpew"]
+texture = ExtResource("3_gcisr")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_328gh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x5a4t"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 2.0
+expand_margin_top = 4.0
+expand_margin_right = 2.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hm8lh"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 2.0
+expand_margin_top = 4.0
+expand_margin_right = 2.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ww4f"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 2.0
+expand_margin_top = 4.0
+expand_margin_right = 2.0
+expand_margin_bottom = 4.0
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_8mq5d")
+dest_scene = "res://scenes/world_1.tscn"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_xwpew")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = -46.0
+offset_right = 49.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 16
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lr0va")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/focus = SubResource("StyleBoxEmpty_328gh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_x5a4t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x5a4t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x5a4t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hm8lh")
+text = "PLAY"
+icon_alignment = 1
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lr0va")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/focus = SubResource("StyleBoxEmpty_328gh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_x5a4t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x5a4t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x5a4t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7ww4f")
+text = "OPTIONS"
+icon_alignment = 1
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lr0va")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/focus = SubResource("StyleBoxEmpty_328gh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_x5a4t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x5a4t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x5a4t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7ww4f")
+text = "QUIT"
+icon_alignment = 1
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_547ed")
+autoplay = true
+parameters/looping = true
+
+[node name="Press_SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_1h2un")
+volume_db = 11.104
+bus = &"SFX"
+
+[node name="Hover_SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_87mol")
+volume_db = -9.147
+bus = &"SFX"
+
+[node name="Temp_Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -151.5
+offset_top = -88.0
+offset_right = 151.5
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("7_vriyh")
+theme_override_font_sizes/font_size = 24
+text = "PROJ.AMBIENCE"
+horizontal_alignment = 1
+
+[node name="Logo" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

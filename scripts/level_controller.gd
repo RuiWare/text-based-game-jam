@@ -105,6 +105,7 @@ func _on_area_2d_body_entered(body):
 		if global.player_side == Vector2.RIGHT && camera_incremented == false:
 			last_player_dir == Vector2.RIGHT
 			global.camera_move += 1
+			print(global.camera_move)
 			camera_incremented = true
 		print("test")
 
@@ -114,5 +115,6 @@ func _on_area_2d_body_exited(body):
 		if global.player_side == Vector2.LEFT:
 			last_player_dir == Vector2.LEFT
 			global.camera_move -= 1
+			print(global.camera_move)
 		camera_incremented = false
 		print("exittest")

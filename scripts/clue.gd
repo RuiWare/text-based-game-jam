@@ -30,6 +30,7 @@ func run_dialogue(dialogue_string):
 	
 func dialogue_signal(arg: String):
 	print("Recieved " + arg)
+	await get_tree().create_timer(0.1).timeout	
 	global.is_dialogue = false
 
 
